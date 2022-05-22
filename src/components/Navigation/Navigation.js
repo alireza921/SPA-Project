@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
 
+
+
 const Navigation = (props) => {
   console.log(props);
 
@@ -15,6 +17,9 @@ const Navigation = (props) => {
         </li>
         <li className={styles.item}>
           <Link to='/About-Us'> AboutUs </Link>
+        </li>
+        <li  className={styles.item}> 
+          <Link to = "/blogs" > BlogPage </Link>
         </li>
       </ul>
     </nav>
