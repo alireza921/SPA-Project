@@ -9,7 +9,7 @@ import Profile from "./pages/profile/Profile";
 const routes = [
   { id: 1, path: "/", element: <Home /> },
   { id: 2, path: "/About-Us", element: <AboutUs /> },
-  { id: 3, path: "/Profile", element: <Profile /> },
+  { id: 3, path: "/Profile/*", element: <Profile /> },
   { id: 4, path: "*", element: <NotFound /> },
   { id: 5, path: "/blogs", element: <BlogPage /> },
   { id: 6, path: "/blogs/:id", element: <Blog /> },
