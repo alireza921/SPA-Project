@@ -1,15 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import styles from "./style.module.css";
 
-
+const items = [
+  { name: "Home", to: "/" },
+  { name: "Profile", to: "/profile" },
+  { name: "AboutUs", to: "/About-Us" },
+  { name: " BlogPage", to: "/blogs" },
+  { name: "PostPage ", to: "/post" },
+];
 
 const Navigation = (props) => {
   console.log(props);
-
+  const params = useParams();
+  console.log(params);
   return (
     <nav className={styles.nav}>
       <ul className={styles.list}>
-        <li className={styles.item}>
+        {items.map((item) => (
+          <li key={item.to} className={styles.item}>
+            {<NavLink to={item.to} /* className={(data) => data.isActive ? `${styles.active}` : "" }  */ > {item.name} </NavLink> }
+          </li>
+        ))}
+
+        {/* <li className={styles.item}>
           <Link to='/'> Home</Link>
         </li>
         <li className={styles.item}>
@@ -18,12 +31,12 @@ const Navigation = (props) => {
         <li className={styles.item}>
           <Link to='/About-Us'> AboutUs </Link>
         </li>
-        <li  className={styles.item}> 
-          <Link to = "/blogs" > BlogPage </Link>
+        <li className={styles.item}>
+          <Link to='/blogs'> BlogPage </Link>
         </li>
-        <li  className={styles.item}> 
-          <Link to = "/post" > PostPage </Link>
-        </li>
+        <li className={styles.item}>
+          <Link to='/post'> PostPage </Link>
+        </li> */}
       </ul>
     </nav>
   );
