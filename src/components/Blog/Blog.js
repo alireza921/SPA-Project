@@ -6,9 +6,11 @@ const Blog = () => {
   const id = params.id;
   return (
     <div>
-      <div> Blog Cmp !  </div>
+      <div> Blog Cmp ! </div>
       <h2> blog no. {id} </h2>
-      <Link to='/blogs'> Back to Blog Page</Link>
+      <Link to= {`/blogs/${parseInt(id) + 1 }`}> go to Next Page </Link>
+      <p> </p>
+      <Link to= '/blogs'> Go back to BlogPage </Link> 
     </div>
   );
 };

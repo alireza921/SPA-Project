@@ -21,6 +21,9 @@ const Navigation = (props) => {
         <li  className={styles.item}> 
           <Link to = "/blogs" > BlogPage </Link>
         </li>
+        <li  className={styles.item}> 
+          <Link to = "/post" > PostPage </Link>
+        </li>
       </ul>
     </nav>
   );
